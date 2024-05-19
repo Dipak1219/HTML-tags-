@@ -1,0 +1,88 @@
+<html>
+<head>
+<script>
+
+
+function prime()
+{
+
+
+ var F = parseInt(document.numbers.firstNum.value);
+ var L = parseInt(document.numbers.secondNum.value);
+ var primeNumbs = new Array();
+ var ctr = beginNum;
+ while(ctr<=endNum)
+{
+if(isPrime(ctr)==true)
+ {
+  primeNumbs[primeNumbs.length] = ctr;
+  }
+  ctr = ctr+1;
+}
+ if (primeNumbs.length == 0)
+{
+document.getElementById('output_content').innerHTML = "There were no prime no within the range.";
+ }
+ else
+ {
+ outputPrimeNums(primeNumbs);
+  }
+}
+function isPrime(num)
+{
+var flag = true;
+for(var i=2; i<=Math.ceil(num/2); i++)
+ {
+if((num%i)==0)
+{
+flag = false;
+ break;
+}
+}
+return flag;    
+ }
+
+
+ function outputPrimeNums(primes)
+{
+ var html = "<h2>Prime Numbers</h2>";
+ for (i=0;i<primes.length;i++){
+  html += primes[i] + "<br/>";
+ }
+ document.getElementById('output_content').innerHTML = html;
+ }
+
+
+</script>
+<style>
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #2980b9;
+}
+</style>
+</head>
+<body>
+<form name="numbers">
+Beginning Number: <input type="text" name="firstNum" />
+End Number: <input type="text" name="secondNum" />
+<input class="button" type="button" value="Find Prime Numbers" onclick="prime()" />
+
+
+</form>
+<div id="output_content">
+</div>
+</body>
+</html>

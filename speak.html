@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Function</title>
+    <script>
+        function say() {
+            var a = String(document.getElementById("sp").value);
+            const synth = window.speechSynthesis;
+            const say = new SpeechSynthesisUtterance();
+            say.rate = 0.5;
+            say.text = a;
+            synth.speak(say);
+        }
+    </script>
+    <style>
+        button {
+            border: none;
+            border-radius: 100px;
+            background-color: red;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            button {
+                margin-right: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    Enter Any Word OR Sentence : <input type="text" id="sp"><br>
+    <button onclick="say()">Say</button><br><br>
+    <b>NOTE:-</b>After Entering Word/Sentence wait 3 or 4 seconds.<br>
+</body>
+
+</html>
