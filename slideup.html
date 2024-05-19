@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#dt").slideUp("slow");
+                //  $("#dt1").slideUp("slow");
+            });
+        });
+    </script>
+    <style>
+         #dt,#flip{
+            padding: 10px;
+            text-align: center;
+            background-color: #fa900e;
+            border: 2px solid #c3c3c3;
+        }
+        #dt{
+            padding: 50px;
+            /* display: none;
+            background-color: orange;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%; */
+
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">bolo</div>
+    <div id="dt">jai shree ram...</div>
+    
+</body>
+</html>

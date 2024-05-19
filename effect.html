@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#a1").fadeTo("fast,1");
+                $("#a2").fadeTo("slow",0.5);
+                $("#a3").fadeTo(2000,0.5);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>click here</button>
+    <div id="a1" style="width: 100px;height: 100px;background-color: yellow;"></div><br>
+    <div id="a2" style="width: 100px;height: 100px;background-color: rgb(0, 166, 255);"></div><br>
+    <div id="a3" style="width: 100px;height: 100px;background-color: rgb(255, 0, 128);"></div><br>
+</body>
+</html>
