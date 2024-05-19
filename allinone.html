@@ -1,33 +1,91 @@
-<html>
- <head>
-   <title> use css pro. </title>
- <style>
-.myclass{margin-left:100px;
-         border:5px solid red;}
-.myclass1{padding-left:100px;
-          border:6px double yellow;}
-.p3{border:5px double blue;}
-.p4{border:5px dotted orange;}
-.p5{border:5px groove green;}
-.p6{border:5px outset pink;}
-.p7{border:5px inset aqua;}
-h1{font-family:bell MT;}
-h2{font-style:italic;}
-h3{font-size:100px;}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#h1").click(function(){
+            $("p").hide(300);
+        });
+        $("#s1").click(function(){
+            $("p").show(300);
+        });
+        $("#t1").click(function(){
+            $("p").toggle(300);
+        });
+        $("#fade").click(function(){
+            $("#d1").fadeToggle("fast");
+            $("#d2").fadeToggle(3000);
+            $("#d3").fadeToggle("slow");
+        });
+        $("#flip").click(function(){
+            $("#panel").slideToggle(1000);
+        });
+        $("#banimate").click(function()
+        {
+            $("#a1").animate({
+                left:'100px'
+            },1400);
+            $("#a2").animate({
+                left:'200px'
+            },1200);
+            $("#a3").animate({
+                left:'300px'
+            },1000);
+            $("#a4").animate({
+                left:'400px'
+            },800); 
+        });
+    });
+        </script>
+        <style>
+           #panel,#flip{
+                padding: 4px;
+                border: 2px solid #ea9d69;
+                text-align: center;
+                background-color: #fbbb6d;
+            }
+            #panel{
+                padding: 50px;
+                display: none;
+            }
+            button,#d1,#d2,#d3{
+                margin-top: 2px;
+            }
+            #container{
+                height: 220px;
+                width: 500px;
+                background-color: aquamarine;
+            }
+        </style>
 </head>
 <body>
-<a href=" "> Dipak</a>
-<h1> this is heading tag </h1>
-<h2> this is heading tag </h2>
-<h3> this is heading tag </h3>
-<p class="myclass"> this is para...</p>
-<p class="myclass1"> this is para...</p>
-<p class="p3"> this is para...</p>
-<p class="p4"> this is para...</p>
-<p class="p5"> this is para...</p>
-<p class="p6"> this is para...</p>
-<p class="p7"> this is para...</p>
-
+  <button id="h1">hide</button>
+    <button id="s1">show</button>
+    <button id="t1">toggle</button>
+    <p> Lorem ipsum dolor sit amet consecteturadipisicing</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+      
+    <div id="d1" style="height: 80px;width: 80px;display: none;background-color: rgb(255, 132, 0);"></div>
+    <div id="d2" style="height: 80px;width: 80px;display: none;background-color: rgb(242, 255, 0);"></div>
+    <div id="d3" style="height: 80px;width: 80px;display: none;background-color: rgb(0, 195, 255);"></div><br>
+    <button id="fade" style="color: red;background-color: yellow; border: 1px solid black;">fade</button><br><br>
+      
+    <div id="flip">hello</div>
+    <div id="panel">mr dipak</div>-->
+    <!-- aniamation -->
+    <button id="banimate">Animation</button>
+    <div id="container">
+    <div id="a11" style="height: 80px;width: 80px;border-radius: 100%;background-color: #3304f0;position: absolute;"></div>
+    <div id="a1" style="height: 80px;width: 80px;border-radius: 100%;background-color: #04f086;position: absolute;"></div>
+    <div id="a2" style="height: 80px;width: 80px;border-radius: 100%;background-color: #04c1f0;position: absolute;"></div>
+    <div id="a3" style="height: 80px;width: 80px;border-radius: 100%;background-color: #ff0285;position: absolute;"></div>
+    <div id="a4" style="height: 80px;width: 80px;border-radius: 100%;background-color: #ff0202;position: absolute;"></div>
+</div>
 </body>
 </html>
